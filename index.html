@@ -76,7 +76,7 @@
 </head>
 <body>
   <h1>Emoji Matching Game</h1>
-  <div id="timer">⏱ Time: 0s</div>
+  <div id="timer">⏱️ Time: 0s</div>
   <div id="game-board"></div>
   <div id="message"></div>
   <button id="restart">🔄 Restart</button>
@@ -101,11 +101,11 @@
 
     function startTimer() {
       seconds = 0;
-      document.getElementById('timer').textContent = ⏱ Time: ${seconds}s;
+      document.getElementById('timer').textContent = `⏱️ Time: ${seconds}s`;
       clearInterval(timerInterval);
       timerInterval = setInterval(() => {
         seconds++;
-        document.getElementById('timer').textContent = ⏱ Time: ${seconds}s;
+        document.getElementById('timer').textContent = `⏱️ Time: ${seconds}s`;
       }, 1000);
     }
 
@@ -185,7 +185,7 @@
     function gameWon() {
       stopTimer();
       document.getElementById('message').textContent =
-        🎉 Congratulations! You matched all emojis in ${seconds} seconds! 🎉;
+        `🎉 Congratulations! You matched all emojis in ${seconds} seconds! 🎉`;
       const winAudio = document.getElementById('win-audio');
       winAudio.play();
     }
