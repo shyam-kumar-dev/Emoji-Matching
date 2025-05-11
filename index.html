@@ -5,137 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Emoji Matching Game</title>
   <style>
-   body {
-  font-family: Arial, sans-serif;
-  background-color: #fefefe;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fefefe;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
 
-h1 {
-  margin-bottom: 10px;
-}
+    h1 {
+      margin-bottom: 10px;
+    }
 
-#game-board {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-  gap: 10px;
-  width: 80vw; /* Adjust the board width */
-  max-width: 500px; /* Limit maximum width */
-}
+    #game-board {
+      display: grid;
+      grid-template-columns: repeat(4, 80px);
+      gap: 10px;
+    }
 
-.card {
-  width: 80px;
-  height: 80px;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #3498db;
-  color: transparent;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: background-color 0.3s, color 0.3s;
-  user-select: none;
-}
+    .card {
+      width: 80px;
+      height: 80px;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #3498db;
+      color: transparent;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: background-color 0.3s, color 0.3s;
+      user-select: none;
+    }
 
-.card.flipped {
-  background-color: #f1c40f;
-  color: #000;
-}
+    .card.flipped {
+      background-color: #f1c40f;
+      color: #000;
+    }
 
-#message {
-  margin-top: 15px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: green;
-}
+    #message {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: green;
+    }
 
-#timer {
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: #444;
-}
+    #timer {
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #444;
+    }
 
-#restart {
-  margin-top: 15px;
-  padding: 8px 16px;
-  background-color: #27ae60;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+    #restart {
+      margin-top: 15px;
+      padding: 8px 16px;
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-#restart:hover {
-  background-color: #219150;
-}
-
-/* Responsive styles */
-@media (max-width: 600px) {
-  .card {
-    width: 60px;
-    height: 60px;
-    font-size: 1.5rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  #game-board {
-    width: 90vw;
-  }
-
-  #message {
-    font-size: 1rem;
-  }
-
-  #timer {
-    font-size: 1rem;
-  }
-
-  #restart {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 400px) {
-  .card {
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
-  }
-
-  h1 {
-    font-size: 1.2rem;
-  }
-
-  #game-board {
-    width: 100vw;
-  }
-
-  #message {
-    font-size: 0.9rem;
-  }
-
-  #timer {
-    font-size: 0.9rem;
-  }
-
-  #restart {
-    font-size: 0.9rem;
-  }
-}
+    #restart:hover {
+      background-color: #219150;
+    }
   </style>
 </head>
 <body>
   <h1>Emoji Matching Game</h1>
-  <div id="timer">⏱️ Time: 0s</div>
+  <div id="timer">⏱ Time: 0s</div>
   <div id="game-board"></div>
   <div id="message"></div>
   <button id="restart">🔄 Restart</button>
@@ -160,11 +101,11 @@ h1 {
 
     function startTimer() {
       seconds = 0;
-      document.getElementById('timer').textContent = `⏱️ Time: ${seconds}s`;
+      document.getElementById('timer').textContent = ⏱ Time: ${seconds}s;
       clearInterval(timerInterval);
       timerInterval = setInterval(() => {
         seconds++;
-        document.getElementById('timer').textContent = `⏱️ Time: ${seconds}s`;
+        document.getElementById('timer').textContent = ⏱ Time: ${seconds}s;
       }, 1000);
     }
 
@@ -244,7 +185,7 @@ h1 {
     function gameWon() {
       stopTimer();
       document.getElementById('message').textContent =
-        `🎉 Congratulations! You matched all emojis in ${seconds} seconds! 🎉`;
+        🎉 Congratulations! You matched all emojis in ${seconds} seconds! 🎉;
       const winAudio = document.getElementById('win-audio');
       winAudio.play();
     }
