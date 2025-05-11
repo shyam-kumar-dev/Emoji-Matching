@@ -6,8 +6,7 @@ A fun and interactive memory game built with HTML, CSS, and JavaScript. Match al
 
 ## 🚀 Live Demo
 
-👉 [Play the Game Now](https://your-live-demo-link.com)  
-_(Replace the link with your GitHub Pages or hosting URL)_
+👉 [Play the Game Now](https://your-live-demo-link.com) 
 
 ## 🧠 How to Play
 
@@ -28,7 +27,5 @@ _(Replace the link with your GitHub Pages or hosting URL)_
 
 - HTML5
 - CSS3
-- JavaScript (Vanilla)
-
-## 📂 Project Structure
+- JavaScript 
 
