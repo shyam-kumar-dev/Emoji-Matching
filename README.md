@@ -23,6 +23,9 @@ Welcome to the **Emoji Matching Game**! A fun and interactive memory game built 
 
 ---
 ---
+## 📸 Screenshot
+
+![Calculator Screenshot](https://shyam-kumar-dev.github.io/My-portfolio-/Game.png) 
 
 ## 🛠️ Future Updates
 
